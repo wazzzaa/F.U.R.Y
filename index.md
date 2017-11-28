@@ -46,7 +46,7 @@ Fig 3
 
 Fig4
 
-![Fig 5: Walking][https://github.com/wazzzaa/wazzzaa.github.io/blob/master/Walking.jpg]
+![Fig 5: Walking](https://github.com/wazzzaa/wazzzaa.github.io/blob/master/Walking.jpg)
 
 
 Figures 2,3,4,5 represent the output of the network on Human actions of Greeting, Smoking, Taking a Photo(selfie you cool kids) and Walking respectively.  The leftmost part represents the 2d observation, the middle part represents the 3d ground truth and the rightmost part represents the 3d predictions we make.

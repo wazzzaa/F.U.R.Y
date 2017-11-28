@@ -43,9 +43,7 @@ The implementation is in TensorFlow and we have trained our network for 30 epoch
 On Human3.6M we follow the standard protocol, using subjects 1, 5, 6, 7, and 8 for training, and subjects 9 and 11 for evaluation. We report the average error in millimetres between the ground truth and our prediction across all joints and cameras, after alignment of the root (central hip) joint. We have trained one model for all the actions part of the Huma3.6M dataset, as opposed to building action-specific models.
 
 
-
-<img src="https://github.com/wazzzaa/wazzzaa.github.io/blob/master/Greeting.jpg">
-![Fig 2: Greeting](https://github.com/wazzzaa/wazzzaa.github.io/blob/master/Greeting.jpg)
+![Fig 2: Greeting](../Greeting.jpg)
 
 **Fig 2: Greeting**
 

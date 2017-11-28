@@ -17,7 +17,7 @@ The first task at hand was to obtain a stacked hourglass model as our 2D represe
 
 We have applied standard normalization to the 2d inputs and 3d outputs by subtracting the mean and dividing by the standard deviation. We also centre the 3d poses around the hip joint as is the standard practice while dealing with Human3.6M dataset.
 
-![Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image](https://imgur.com/YOfU2Gz)
+![Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image](https://i.imgur.com/YOfU2Gz.jpg)
 
 **Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image**
 
@@ -48,12 +48,12 @@ On Human3.6M we follow the standard protocol, using subjects 1, 5, 6, 7, and 8 f
 **Fig 2: Greeting**
 
 
-![Fig 3: Smoking](https://imgur.com/61jLWuS)
+![Fig 3: Smoking](https://i.imgur.com/61jLWuS.jpg)
 
 **Fig 3: Smoking**
 
 
-![Fig 4: Taking a Photo](https://imgur.com/blgYgnq)
+![Fig 4: Taking a Photo](https://i.imgur.com/blgYgnq.jpg)
 
 **Fig 4: Taking a photo**
 

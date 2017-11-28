@@ -44,7 +44,7 @@ On Human3.6M we follow the standard protocol, using subjects 1, 5, 6, 7, and 8 f
 
 
 
-![Fig 2: Greeting](https://github.com/wazzzaa/wazzzaa.github.io/blob/master/Greeting.jpg)
+![Fig 2: Greeting](https://github.com/wazzzaa/wazzzaa.github.io/Greeting.jpg)
 
 **Fig 2: Greeting**
 

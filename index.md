@@ -8,10 +8,9 @@ Formally, given an image – a 2-dimensional representation – of a human being
 
 ## Datasets
 
-We used the Human 3.6m dataset to train and test our network. Human3.6M is, to the best of our knowledge, currently the largest publicly available datasets for human 3d pose estimation. The dataset consists of 3.6 million images featuring 7 professional actors performing 15 everyday activities such as walking, eating, sitting, making a phone call and engaging in a discussion. 2d joint locations and 3d ground truth positions are available, as well as projection (camera) parameters and body proportions for all the actors.
-Human 3.6M is a dataset which comprises 3.6 million image frames with their corresponding 2D and 3D poses. The subjects perform complex motion scenarios based on typical human activities such as discussion, eating, greeting and walking.
+We used the Human3.6M dataset to train and test our network. Human3.6M is, to the best of our knowledge, currently the largest publicly available datasets for human 3d pose estimation. The dataset consists of 3.6 million images featuring 7 professional actors performing 15 everyday activities such as walking, eating, sitting, making a phone call and engaging in a discussion. 2d joint locations and 3d ground truth positions are available, as well as projection (camera) parameters and body proportions for all the actors.
 
-The first task at hand was to obtain a stacked hourglass model as our 2D representation. We leveraged the work of the state of-the-art stacked hourglass network of Newel], pre-trained on the MPII dataset. We use the bounding boxes provided with H3.6M to estimate the centre of the person in the image. We crop a square of size 440 × 440 pixels around this computed centre to the detector (which is then resized to 256 × 256 by stacked hourglass). Stacked Hourglass models are important because they map to probability distributions in 3D space instead of the traditional method of regressing joint heatmaps.
+The first task at hand was to obtain a stacked hourglass model as our 2D representation. We leveraged the work of the state of-the-art stacked hourglass network of Newel[1], pre-trained on the MPII dataset. We use the bounding boxes provided with Human3.6M to estimate the centre of the person in the image. We crop a square of size 440 × 440 pixels around this computed centre to the detector (which is then resized to 256 × 256 by stacked hourglass). Stacked Hourglass models are important because they map to probability distributions in 3D space instead of the traditional method of regressing joint heatmaps.
 
 ## Data Preprocessing
 
@@ -40,7 +39,7 @@ The implementation is in TensorFlow and we have trained our network for 30 epoch
 
 ## Experiments
 
-On Human3.6M we follow the standard protocol, using subjects 1, 5, 6, 7, and 8 for training, and subjects 9 and 11 for evaluation. We report the average error in millimetres between the ground truth and our prediction across all joints and cameras, after alignment of the root (central hip) joint. We have trained one model for all the actions part of the Huma3.6M dataset, as opposed to building action-specific models.
+On Human3.6M we follow the standard protocol, using subjects 1, 5, 6, 7, and 8 for training, and subjects 9 and 11 for evaluation. We report the average error in millimetres between the ground truth and our prediction across all joints and cameras, after alignment of the root (central hip) joint. We have trained one model for all the actions part of the Human3.6M dataset, as opposed to building action-specific models.
 
 
 ![Fig 2: Greeting](https://i.imgur.com/ol9vpgM.jpg)
@@ -64,7 +63,7 @@ On Human3.6M we follow the standard protocol, using subjects 1, 5, 6, 7, and 8 f
 Figures 2,3,4,5 represent the output of the network on Human actions of Greeting, Smoking, Taking a Photo(selfie you cool kids) and Walking respectively.  The leftmost part represents the 2d observation, the middle part represents the 3d ground truth and the rightmost part represents the 3d predictions we make.
 
 ## Concluding remarks and future work
-Our network consistently produced a test accuracy of 70% or more over various types of human pose representations that the Human3.6m dataset provides. The simple network provided better  accuracy better than the stacked denoising autoencoder model that we previously planned to incorporate. 
+Our network consistently produced a test accuracy of 70% or more over various types of human pose representations that the Human3.6M dataset provides. The simple network provided better  accuracy better than the stacked denoising autoencoder model that we previously planned to incorporate. 
 
 For the future we look to obtain a 3D representation over videos instead of images. Although this is a solved problem, we would love to see how the network performs over videos.
 
@@ -74,4 +73,4 @@ For the future we look to obtain a 3D representation over videos instead of imag
 
 [2] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual learning for image recognition. In CVPR, pages 770–778, 2016
 
-[3]TEKIN ET AL.: STRUCTURED PREDICTION OF 3D HUMAN POSE .Structured Prediction of 3D Human Pose with Deep Neural Networks
+[3] Tekin Et Al. Structured Prediction Of 3D Human Pose .Structured Prediction of 3D Human Pose with Deep Neural Networks

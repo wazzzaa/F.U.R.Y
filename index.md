@@ -4,7 +4,7 @@ The perception of depth from purely 2d stimuli is a classic problem that has cap
 
 3D human pose can now be estimated reliably by training algorithms to exploit depth data or video sequences. However, estimating such a 3D pose from single ordinary images remains challenging because of the many ambiguities inherent to monocular 3D reconstruction, including occlusions, complex backgrounds, and, more generally, the loss of depth information resulting from the projection from 3D to 2D.
 
-Formally, given an image – a 2-dimensional representation – of a human being, 3d pose estimation is the task of producing a 3-dimensional figure that matches the spatial position of the depicted person. In order to go from an image to a 3d pose, an algorithm has to be invariant to a number of factors, including background scenes, lighting, clothing shape and texture, skin color and image imperfections, among others. Early methods achieved this invariance through features such as silhouettes, shape context , SIFT descriptors or edge direction histograms. While data-hungry deep learning systems currently outperform approaches based on human-engineered features on tasks such as 2d pose estimation (which also require these invariances), the lack of 3d ground truth posture data for images in the wild makes the task of inferring 3d poses directly from colour images challenging.
+Formally, given an image a 2-dimensional representation of a human being, 3d pose estimation is the task of producing a 3-dimensional figure that matches the spatial position of the depicted person. In order to go from an image to a 3d pose, an algorithm has to be invariant to a number of factors, including background scenes, lighting, clothing shape and texture, skin color and image imperfections, among others. Early methods achieved this invariance through features such as silhouettes, shape context , SIFT descriptors or edge direction histograms. While data-hungry deep learning systems currently outperform approaches based on human-engineered features on tasks such as 2d pose estimation (which also require these invariances), the lack of 3d ground truth posture data for images in the wild makes the task of inferring 3d poses directly from colour images challenging.
 
 ## Datasets
 
@@ -16,11 +16,12 @@ The first task at hand was to obtain a stacked hourglass model as our 2D represe
 
 We have applied standard normalization to the 2d inputs and 3d outputs by subtracting the mean and dividing by the standard deviation. We also centre the 3d poses around the hip joint as is the standard practice while dealing with Human3.6M dataset.
 
+## Architecture
+
+
 ![Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image](https://i.imgur.com/YOfU2Gz.jpg)
 
 **Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image**
-
-## Architecture
 
 Our approach is based on a simple, deep, multilayer neural network with batch normalization , dropout and Rectified Linear Units (RELUs), as well as residual connections. Not depicted in the above image are two extra linear layers: one applied directly to the input, which increases its dimensionality to 1024, and one applied before the final prediction, that produces final output.
 

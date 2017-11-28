@@ -16,7 +16,8 @@ The first task at hand was to obtain a stacked hourglass model as our 2D represe
 ### Data Preprocessing
 
 We have applied standard normalization to the 2d inputs and 3d outputs by subtracting the mean and dividing by the standard deviation. We also centre the 3d poses around the hip joint as is the standard practice while dealing with Human3.6M dataset.
- ![Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image](https://github.com/wazzzaa/wazzzaa.github.io/blob/master/arch.JPG)
+ ![Fig 1 Architecture: Stacked hourglass network representation of a 2D image is put through our network to obtain a 3D representation of the 2D image]
+ (https://github.com/wazzzaa/wazzzaa.github.io/blob/master/arch.JPG)
 
 ### Architecture
 
@@ -65,6 +66,8 @@ For the future we look to obtain a 3D representation over videos instead of imag
 
 
 ### References
-[1] A. Newell, K. Yang, and J. Deng. Stacked hourglass networks for human pose estimation. In ECCV, 2016. 1, 2, 4, 5, 8 
+[1] A. Newell, K. Yang, and J. Deng. Stacked hourglass networks for human pose estimation. In ECCV, 2016. 1, 2, 4, 5, 8
+
 [2] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual learning for image recognition. In CVPR, pages 770–778, 2016
+
 [3]TEKIN ET AL.: STRUCTURED PREDICTION OF 3D HUMAN POSE .Structured Prediction of 3D Human Pose with Deep Neural Networks
